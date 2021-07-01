@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">App cua Trung</string>
+
+    -------- main ------
+    <string name="main_title">Create New Node</string>
+    <string name="main_save">SAVE</string>
+    <string name="main_remind_me_at">Remind me at:</string>
+    <string name="main_time">14:20</string>
+    <string name="main_day">24/04/2000</string>
+    <string name="main_type">Type: </string>
+    <string name="main_tag">Tags: </string>
+    <string name="main_weeks">Weeks: </string>
+    <string name="main_tune">Tune</string>
+    
+    -------- menu save -------
+    <string name="menu_cancel">Cancel</string>
+
+    -------- menu tune -------
+
+    <string name="menu_tune_fromfile">From file</string>
+    <string name="menu_tune_fromdefauts">From defaults</string>
+</resources>

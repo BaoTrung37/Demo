@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">NguyenBaoTrung_Android43_buoi4</string>
+
+    --header--
+    <string name="header_date">Ngày giao dịch</string>
+    <string name="header_code">Mã CCQ</string>
+    <string name="header_Giatrimua">Giá trị mua</string>
+    <string name="header_Giathitruong">Giá trị thị trường</string>
+    <string name="header_profit">Lợi nhuận</string>
+
+    -- activity main --
+    <string name="activity_main_account">Tài khoản</string>
+    <string name="activity_main_report">Báo cáo</string>
+    <string name="activity_main_set_command">Đặt lệnh</string>
+    <string name="activity_main_codes">Số lệnh</string>
+    <string name="activity_main_notification">Thông báo</string>
+
+</resources>

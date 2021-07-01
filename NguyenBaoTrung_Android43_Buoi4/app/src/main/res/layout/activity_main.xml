@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000"
+            android:drawableLeft="@drawable/ic_baseline_menu_24"
+            android:drawablePadding="-50dp"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:text="BÁO CÁO LỢI NHUẬN"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:background="@drawable/background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="Đang nắm giữ"
+                android:textColor="#FF00"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="Đã bán" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="70dp"
+            android:layout_weight="8"
+            android:background="@drawable/custom_layout2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:id="@+id/textNgayGD"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_hang2"
+                    android:gravity="center"
+                    android:text="@string/header_date"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:id="@+id/textMaCCQ"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_hang"
+                    android:gravity="center"
+                    android:text="@string/header_code"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:id="@+id/textGiaMua"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_hang"
+                    android:gravity="center"
+                    android:text="@string/header_Giatrimua"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:id="@+id/textGiaThiTruong"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_hang"
+                    android:gravity="center"
+                    android:text="@string/header_Giathitruong"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:id="@+id/textLoiNhuan"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_hang3"
+                    android:gravity="center"
+                    android:text="@string/header_profit"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <ListView
+                android:id="@+id/listBaoCao"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="11" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_account_circle_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="@string/activity_main_account"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_signal_cellular_alt_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="@string/activity_main_report"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:padding="3dp"
+                android:src="@drawable/ic_baseline_touch_app_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="@string/activity_main_codes"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_library_books_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="@string/activity_main_set_command"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_notifications_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="@string/activity_main_notification"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">App của trung</string>
+
+    ------- activity main --------
+    <string name="activity_main_user">Admin</string>
+    <string name="activity_main_pass">123456</string>
+    <string name="activity_main_username">Username</string>
+    <string name="activity_main_password">Password</string>
+    <string name="activity_main_login">Login</string>
+    <string name="activity_main_error_username">Account dose not exist!</string>
+    <string name="activity_main_error_password">Wrong password!</string>
+
+    -------- activity food order -----
+    <string name="activity_food_order_title">Food order</string>
+    <string name="activity_food_order_title_welcome">Welcome Bảo Trung</string>
+    <string name="activity_food_order_total_price">Total price</string>
+    <string name="activity_food_order_total">0$</string>
+    <string name="activity_food_order_button_order">Order</string>
+    <string name="activity_food_order_confirm">Thank you! You order is sent to restaurant!</string>
+
+    -------- activity shopping cart -----
+    <string name="shopping_cart_title">Your order</string>
+    <string name="shopping_cart_total_price">Total</string>
+    <string name="shopping_cart_total">0$</string>
+</resources>

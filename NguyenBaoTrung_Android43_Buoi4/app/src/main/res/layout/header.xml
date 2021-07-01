@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:stretchColumns="*">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textNgayGD"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_column="0"
+            android:layout_span="1"
+            android:layout_weight="1"
+            android:background="@drawable/custom_hang"
+            android:gravity="center"
+            android:text="Ngày Giao Dịch"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textMaCCQ"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_column="1"
+            android:layout_span="1"
+            android:layout_weight="1"
+            android:background="@drawable/custom_hang"
+            android:gravity="center"
+            android:text="Mã CQQ"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textGiaMua"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_column="2"
+            android:layout_span="1"
+            android:layout_weight="1"
+            android:background="@drawable/custom_hang"
+            android:gravity="center"
+            android:text="Giá trị mua"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textGiaThiTruong"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_column="3"
+            android:layout_span="1"
+            android:layout_weight="1"
+            android:background="@drawable/custom_hang"
+            android:gravity="center"
+            android:text="Giá thị trường"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textLoiNhuan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_column="4"
+            android:layout_span="1"
+            android:layout_weight="1"
+            android:background="@drawable/custom_hang"
+            android:gravity="center"
+            android:text="Lợi nhuận"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+
+</TableLayout>

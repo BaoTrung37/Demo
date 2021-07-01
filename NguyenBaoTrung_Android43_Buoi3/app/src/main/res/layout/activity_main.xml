@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinev1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinev2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineh1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineh2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineh3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <LinearLayout
+        android:id="@+id/linearLeftTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guidelineh3"
+        app:layout_constraintEnd_toStartOf="@id/guidelinev2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Orientation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_weight="9"
+                    android:background="@drawable/custom_actionbar"
+                    android:gravity="center"
+                    android:text="Products"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_actionbar"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_baseline_menu_24" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="5"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="5"
+                        android:background="@drawable/custom_tablelayout"
+                        android:stretchColumns="*">
+
+                        <TableRow>
+
+                            <TextView
+                                android:background="@drawable/custom_tablelayout"
+                                android:gravity="center"
+                                android:text="Loan"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:background="@drawable/custom_tablelayout"
+                                android:gravity="center"
+                                android:text="Product name"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:background="@drawable/custom_tablelayout"
+                                android:gravity="center"
+                                android:text="Amount due"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:background="@drawable/custom_tablelayout"
+                                android:gravity="center"
+                                android:text="DPD"
+                                android:textSize="15sp" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_tablelayout">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center|end"
+                            android:paddingRight="10dp"
+                            android:text="Total:    Amount due" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:background="@drawable/custom_textview1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/custom_textview1"
+                        android:gravity="center|left"
+                        android:text="Master Comment" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_actionbar"
+                        android:gravity="center"
+                        android:text="Save Comment"
+                        android:textColor="#FFF" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearRightTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/guidelineh3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelinev2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Orientation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/custom_actionbar">
+
+            <TextView
+                android:id="@+id/textViewIF"
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:text="Client Information"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:text="ADD\nINFO"
+                android:textSize="10sp"
+                android:gravity="center"
+                
+                android:drawableLeft="@drawable/ic_baseline_add_24"
+                android:textColor="@color/white"
+                android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="5"
+            android:background="@drawable/custom_tablelayout" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLeftBottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="7dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelinev2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineh3"
+        tools:ignore="Orientation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="6dp"
+                android:layout_weight="9"
+                android:background="@drawable/custom_actionbar"
+                android:gravity="center"
+                android:text="Client Action"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/custom_image2"
+                android:src="@drawable/ic_baseline_swap_horizontal_circle_24" />
+
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="5"
+            android:background="@drawable/custom_tablelayout"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/custom_tablelayout"
+                    android:gravity="center"
+                    android:text="ID"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:background="@drawable/custom_tablelayout"
+                    android:gravity="center"
+                    android:text="Loan"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:background="@drawable/custom_tablelayout"
+                    android:gravity="center"
+                    android:text="Date"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:background="@drawable/custom_tablelayout"
+                    android:gravity="center"
+                    android:text="Operator"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:background="@drawable/custom_tablelayout"
+                    android:gravity="center"
+                    android:text="Due"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:background="@drawable/custom_tablelayout"
+                    android:gravity="center"
+                    android:text="Next action"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:background="@drawable/custom_tablelayout"
+                    android:gravity="center"
+                    android:text="Action"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:background="@drawable/custom_tablelayout"
+                    android:gravity="center"
+                    android:text="Result(*)"
+                    android:textSize="15sp" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearRightBottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelinev2"
+        app:layout_constraintTop_toBottomOf="@id/guidelineh3"
+        tools:ignore="Orientation">
+
+        <ImageView
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_tablelayout"
+            android:src="@drawable/duck_gang" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
