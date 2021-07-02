@@ -1,76 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/nen"
-    android:orientation="vertical"
-    tools:context=".ShoppingCart">
+<layout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="#C18DCA">
-
-        <ImageButton
-            android:id="@+id/image_forward"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"
-            android:background="@android:color/transparent"
-            android:rotationY="180"
-            android:src="@drawable/ic_baseline_forward_24" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
-            android:layout_toRightOf="@+id/image_forward"
-            android:text="@string/shopping_cart_title"
-            android:textColor="@color/white"
-            android:textSize="25sp" />
-    </RelativeLayout>
-
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ListView
-            android:id="@+id/listview_cart"
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/custom_listview" />
+        android:background="@drawable/nen"
+        android:orientation="vertical"
+        tools:context=".ShoppingCart">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="70dp"
+            android:background="#C18DCA">
 
-            <TextView
+            <ImageButton
+                android:id="@+id/image_forward"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:text="@string/shopping_cart_total_price"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:layout_marginLeft="15dp"
+                android:background="@android:color/transparent"
+                android:rotationY="180"
+                android:src="@drawable/ic_baseline_forward_24" />
 
             <TextView
-                android:id="@+id/text_cart_total"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="10dp"
-                android:text="@string/shopping_cart_total"
+                android:layout_marginLeft="40dp"
+                android:layout_toRightOf="@+id/image_forward"
+                android:text="@string/shopping_cart_title"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:textSize="25sp" />
         </RelativeLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/listview_cart"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/custom_listview" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/shopping_cart_total_price"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/text_cart_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/shopping_cart_total"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+
+
+</layout>
+

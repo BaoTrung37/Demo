@@ -1,6 +1,8 @@
 package com.example.appcatrung;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.BindingBuildInfo;
+import androidx.databinding.DataBindingUtil;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -10,6 +12,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.appcatrung.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
 import java.util.HashMap;
