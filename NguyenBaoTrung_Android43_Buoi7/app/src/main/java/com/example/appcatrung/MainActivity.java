@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements ILogin{
             Toast.makeText(this,mess,Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MainActivity.this, FoodOrder.class);
             startActivity(intent);
+            overridePendingTransition(R.anim.anim_enter,R.anim.anim_exit);
     }
 
     @Override

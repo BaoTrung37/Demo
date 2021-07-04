@@ -56,6 +56,7 @@ public class FoodOrder extends AppCompatActivity {
 
                 intent1.putExtras(bundle1);
                 startActivity(intent1);
+                overridePendingTransition(R.anim.anim_enter,R.anim.anim_exit);
             }
 
         });

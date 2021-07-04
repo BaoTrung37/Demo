@@ -41,6 +41,7 @@ public class ShoppingCart extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_OK,intent);
                 finish();
+                overridePendingTransition(R.anim.anim_enter,R.anim.anim_exit);
             }
         });
 
