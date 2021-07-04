@@ -15,6 +15,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
+import com.example.appcatrung.databinding.ActivityFoodOrderBinding;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,14 +28,6 @@ public class FoodOrder extends AppCompatActivity {
     public final static String[] _food = {"Pizza Panda", "KFC Super",
             "Bread Eggs", "Coca cola", "Chicken Super", "Cup Cake"};
     public final static int[] _price = {10, 20, 5, 7, 50, 25};
-    public final static int REQUEST_CODE_EX = 1;
-
-    private ImageButton imbtShoppingCart;
-    private Button btOrder;
-    private ListView lvMenuFoodOrder;
-    private TextView tvTotal;
-    private TextView tvCount;
-    private TextView tvNotify;
 
     private HashMap<String,Integer> map;
     private ArrayList<Food> listFoods;
@@ -41,7 +36,7 @@ public class FoodOrder extends AppCompatActivity {
 
     private int total;
     private int count;
-
+    private ActivityFoodOrderBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +44,7 @@ public class FoodOrder extends AppCompatActivity {
 
         connectView();
 
-        imbtShoppingCart.setOnClickListener(new View.OnClickListener() {
+        binding.imageCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent(FoodOrder.this, ShoppingCart.class);
@@ -64,7 +59,7 @@ public class FoodOrder extends AppCompatActivity {
             }
 
         });
-        lvMenuFoodOrder.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        binding.listviewFoodorder.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Food food= listFoods.get(position);
@@ -77,25 +72,25 @@ public class FoodOrder extends AppCompatActivity {
                     listFoodOrders.add(food);
                 }
 //                Log.d("haha",String.valueOf(map.get(food)));
-                tvCount.setText(++count + "");
+                binding.textCount.setText(++count + "");
                 total += food.getPrice();
-                tvTotal.setText(total + "$");
-                tvNotify.setVisibility(View.INVISIBLE);
+                binding.textTotal.setText(total + "$");
+                binding.textNotify.setVisibility(View.INVISIBLE);
             }
         });
-        btOrder.setOnClickListener(new View.OnClickListener() {
+        binding.buttonOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(total != 0){
                     total = 0;
                     count = 0;
-                    tvCount.setText(count + "");
-                    tvTotal.setText(total + "$");
-                    tvNotify.setVisibility(View.VISIBLE);
+                    binding.textCount.setText(count + "");
+                    binding.textTotal.setText(total + "$");
+                    binding.textNotify.setVisibility(View.VISIBLE);
                     listFoodOrders.clear();
                 }
                 else{
-                    tvNotify.setVisibility(View.INVISIBLE);
+                    binding.textNotify.setVisibility(View.INVISIBLE);
                     Toast.makeText(FoodOrder.this,
                             "you need to choose at least 1 product",
                             Toast.LENGTH_LONG).show();
@@ -106,12 +101,7 @@ public class FoodOrder extends AppCompatActivity {
     }
 
     private void connectView() {
-        imbtShoppingCart = findViewById(R.id.image_cart);
-        btOrder = findViewById(R.id.button_order);
-        lvMenuFoodOrder = findViewById(R.id.listview_foodorder);
-        tvTotal = findViewById(R.id.text_total);
-        tvCount = findViewById(R.id.text_count);
-        tvNotify = findViewById(R.id.text_notify);
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_food_order);
 
         total = 0;
         count = 0;
@@ -124,7 +114,7 @@ public class FoodOrder extends AppCompatActivity {
         }
 
         foodAdapter = new FoodAdapter(listFoods);
-        lvMenuFoodOrder.setAdapter(foodAdapter);
+        binding.listviewFoodorder.setAdapter(foodAdapter);
     }
 
     @Override

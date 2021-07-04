@@ -14,15 +14,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.appcatrung.databinding.ActivityMainBinding;
+import com.example.appcatrung.databinding.ActivityShoppingCartBinding;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ShoppingCart extends AppCompatActivity {
-
-    private ImageButton imbtBack;
-    private ListView lvFoodOrdered;
-    private TextView tvTotal;
 
     private ArrayList<Food> listFoodrdered;
     private HashMap<String,Integer> map;
@@ -32,13 +29,14 @@ public class ShoppingCart extends AppCompatActivity {
     private Intent intent;
     private Bundle bundle;
 
+    private ActivityShoppingCartBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_cart);
         connectView();
 
-        imbtBack.setOnClickListener(new View.OnClickListener() {
+        binding.imageForward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 setResult(RESULT_OK,intent);
@@ -49,10 +47,7 @@ public class ShoppingCart extends AppCompatActivity {
     }
 
     private void connectView() {
-        imbtBack = findViewById(R.id.image_forward);
-        lvFoodOrdered = findViewById(R.id.listview_cart);
-        tvTotal = findViewById(R.id.text_cart_total);
-
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_shopping_cart);
         listFoodrdered = new ArrayList<>();
         map = new HashMap<>();
 
@@ -66,10 +61,10 @@ public class ShoppingCart extends AppCompatActivity {
             listFoodrdered = (ArrayList<Food>) bundle.getSerializable("ListFood");
             total = bundle.getInt("Total",0);
         }
-        tvTotal.setText(total +"$");
+        binding.textCartTotal.setText(total +"$");
 
         foodOrderAdapter = new FoodOrderAdapter(listFoodrdered,map);
-        lvFoodOrdered.setAdapter(foodOrderAdapter);
+        binding.listviewCart.setAdapter(foodOrderAdapter);
 
     }
 }
